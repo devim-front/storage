@@ -1,0 +1,17 @@
+{
+  "inputFiles": ["./src"],
+  "mode": "file",
+  "exclude": ["**/*+(index|.spec|.e2e|.test).(ts|tsx)"],
+  "readme": "none",
+  "excludeNotDocumented": true,
+  "excludeNotExported": true,
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "stripInternal": true,
+  "hideGenerator": true,
+  "hideSources": true,
+  "theme": "bitbucket",
+  "skipSidebar": true,
+  "namedAnchors": true,
+  "plugin": ["typedoc-plugin-markdown"]
+}

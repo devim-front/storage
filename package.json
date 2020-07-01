@@ -1,0 +1,60 @@
+{
+  "name": "@devim-front/storage",
+  "version": "1.0.1",
+  "description": "Предоставляет механизмы для управления localStorage",
+  "main": "./build/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build:drop": "rimraf build",
+    "build:make": "tsc",
+    "build:docs": "run-s docs",
+    "build": "run-s build:*",
+    "test": "mocha -r ts-node/register ./src/index.test.ts",
+    "docs:drop": "rimraf docs",
+    "docs:make": "typedoc --options typedoc.json",
+    "docs": "run-s docs:*",
+    "release:make": "run-s build",
+    "release:push": "np",
+    "release:done": "npm publish",
+    "release": "run-s release:*"
+  },
+  "keywords": [
+    "devim-front",
+    "localStorage"
+  ],
+  "author": "gleb-mikhalkov",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/react-dom": "^16.9.8",
+    "chai": "^4.2.0",
+    "husky": "^4.2.5",
+    "mocha": "^7.2.0",
+    "np": "^6.2.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.1",
+    "typedoc": "^0.17.7",
+    "typedoc-plugin-markdown": "^2.2.17",
+    "typescript": "^3.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devim-front/storage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devim-front/storage/issues"
+  },
+  "homepage": "https://github.com/devim-front/storage#readme",
+  "dependencies": {
+    "@devim-front/error": "^1.1.0",
+    "@devim-front/service": "^2.1.2"
+  }
+}
